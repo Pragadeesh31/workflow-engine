@@ -9,3 +9,7 @@ app = FastAPI(
 @app.get("/health")
 def health_check():
     return {"status": "Workflow Engine Running"}
+
+from app.core.init_db import init_db
+
+init_db()
